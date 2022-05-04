@@ -1,0 +1,36 @@
+@import-normalize;
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.15rem;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "sans-serif";
+    
+}
+
+h1{
+    /* 預設30px */
+    font-size:1.875rem;
+}
+h2{ 
+    /* 預設28px */
+    font-size:1.75rem;
+    font-family: 'Times New Roman', Times, serif,serif;
+
+}
+h3{
+    /* 預設24px */
+    font-size:1.5rem;
+}
+
+h4{
+    /* 預設20px */
+    font-size:1.25rem;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}

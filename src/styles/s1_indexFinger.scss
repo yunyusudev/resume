@@ -1,0 +1,130 @@
+@import "./mixin.scss";
+
+.indexFingerContainer {
+    @include position(absolute, -10%, 0);
+    @include flexSet(row, center, center);
+    @include whSet(100%, 100%, 0, 0);
+    cursor: auto;
+    animation: wipe 3.5s ease-in-out 3.2s 1 normal both;
+    @include md {
+        animation: wipe_md 3.5s ease-in-out 3.4s 1 normal both;
+    }
+    .indexFingerSvg {
+        @include whSet(15%, 15%, 0, 0);
+        fill: none;
+        stroke: $colorWhite;
+        stroke-width: 12;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        overflow: visible;
+        @include md {
+            @include whSet(18%, 18%, 0, 0);
+        }
+        @include sm {
+            @include whSet(22%, 22%, 0, 0);
+        }
+        @include sm {
+            @include whSet(25%, 25%, 0, 0);
+        }
+        @include xxs {
+            @include whSet(28%, 28%, 0, 0);
+        }
+        circle {
+            fill: rgba(139, 139, 139, 0.732);
+            fill:rgba(255, 255, 255, 0.82);
+            fill:$colorDarkGray;
+            fill: $colorA;
+            stroke: none;
+        }
+        .txtWipe{
+            fill: $colorWhite;
+            stroke:none;
+        }
+    }
+}
+
+@keyframes wipe {
+    0% {
+        opacity: 0;
+        margin-left: -10%;
+        margin-top: -16%;
+        z-index: 1;
+
+    }
+    10% {
+        opacity: 1;
+        margin-left: -10%;
+        margin-top: -16%;
+    }
+    30% {
+        margin-left: -17%;
+        margin-top: 2%;
+    }
+    45% {
+        margin-left: 1.5%;
+        margin-top: -13%;
+    }
+    60% {
+        margin-left: -5%;
+        margin-top: 4%;
+        opacity: 1;
+
+    }
+    88% {
+        opacity: 0;
+
+    }
+    99% {
+        margin-left: 60%;
+        margin-top: -5%;
+        opacity: 0;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes wipe_md {
+    0% {
+        opacity: 0;
+        margin-left: -10%;
+        margin-top: -16%;
+        z-index: 1;
+
+    }
+    20% {
+        opacity: 1;
+        margin-left: -25%;
+        margin-top: 30%;
+    }
+    40% {
+        margin-left: 23%;
+        margin-top: -12%;
+    }
+    60% {
+        margin-left: 10%;
+        margin-top: 28%;
+    }
+    80% {
+        margin-left: 65%;
+        margin-top: -6%;
+        opacity: 1;
+        z-index: 1;
+
+    }
+    99% {
+        margin-left: 65%;
+        margin-top: -6%;
+        opacity: 0;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -5;
+    }
+}
+
+

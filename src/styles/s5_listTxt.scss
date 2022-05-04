@@ -1,0 +1,95 @@
+@import "./mixin.scss";
+.ListTxt {
+    @include flexSet(row, flex-start, flex-start);
+    color: $colorDarkGray;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 2rem;
+    @include lg {
+        @include flexSet(column, flex-start, flex-start);
+    }
+    @include md {
+        @include flexSet(row, flex-start, flex-start);
+    }
+    @include sm {
+        @include flexSet(column, flex-start, flex-start);
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $colorWhite;
+        border: 0.75px solid $colorLightGray;
+        position: absolute;
+        left: -5px;
+        top: 5px;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: calc(100% + 10px);
+        border: 0.5px solid $colorLightGray;
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+    &:last-child {
+        &:before {
+            display: none;
+        }
+    }
+    .ListYear {
+        color: $colorDarkGray;
+        font-family: "Times New Roman", Times, serif, serif;
+        font-style: italic;
+        letter-spacing: 0.1rem;
+        white-space: nowrap;
+    }
+    .ListContent {
+        margin-left: 3rem;
+        color: $colorBlack;
+        letter-spacing: 0.1rem;
+        @include lg {
+            margin-left: 0rem;
+            margin-top: 0.5rem;
+        }
+        @include md {
+            margin-left: 3rem;
+            margin-top: 0rem;
+        }
+        @include sm {
+            margin-left: 0rem;
+            margin-top: 0.5rem;
+        }
+        .ListContentTitle {
+            background-color: rgb(255, 247, 220);
+            line-height: 1.35rem;
+            position: relative;
+            top: -2px;
+        }
+    }
+    .ListDetail {
+        margin: 1rem 0 0 0rem;
+        padding-bottom: 2rem;
+        .ListDetailitem {
+            line-height: 1.25rem;
+            margin: 0.5rem 0 0 1.55rem;
+            text-indent: -1.55rem;
+            list-style-type: decimal;
+            list-style-position: inside;
+        }
+    }
+    // &:hover {
+    //     &:after {
+    //         background: $colorWhite;
+    //         border: 0.3px solid $colorLightGray;
+    //         cursor: pointer;
+    //     }
+    //     .ListDetail {
+    //         height: unset;
+    //     }
+    // }
+}

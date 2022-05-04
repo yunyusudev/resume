@@ -1,0 +1,37 @@
+@import "./mixin.scss";
+
+.section5 {
+    @include whSet(100%, unset, 0, 0);
+    .title {
+        @include titleBar();
+    }
+    .ExpContainer {
+        @include whSet(100%, unset, 0, 0rem 6rem 4rem);
+        @include lg {
+            padding:  0rem 5rem 4rem;
+        }
+        @include lg {
+            padding:  0rem 4rem 4rem;
+        }
+        @include sm {
+            padding:  0rem 3rem 4rem;
+        }
+        @include s {
+            padding:  0rem 1rem 4rem;
+        }
+        .ListContainer {
+            padding: 3rem 0;
+            border-bottom: 0.75px solid $colorLightGray;
+            
+            &:first-child {
+                padding: 0 0 3rem;
+            }
+            &:last-child {
+                border: none;
+            }
+            .ListTitle {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

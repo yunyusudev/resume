@@ -1,0 +1,27 @@
+@import "./mixin.scss";
+
+footer {
+    @include whSet(100%, 3rem, 0 0 2rem 0, 0);
+    hr {
+        color: $colorGray;
+        @include whSet(100%, 1px, 1rem 0, 0);
+    }
+    div {
+        color: $colorGray;
+        @include flexSet(row, flex-start, center);
+        @include md {
+            justify-content: center;
+        }
+        .footer {
+            font-size: 0.8rem;
+            font-style: italic;
+            letter-spacing: 0.1rem;
+            font-family: "Times New Roman", Times, serif, serif;
+            color: $colorGray;
+            @include flexSet(row, space-between, center);
+            @include s {
+                text-align: center;
+            }
+        }
+    }
+}

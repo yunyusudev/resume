@@ -1,0 +1,233 @@
+@import "./mixin.scss";
+.active {
+    color: #fff !important;
+    background-color: $colorGray;
+    padding: 0 0.6rem 0 0.75rem;
+}
+
+.header {
+    .logo {
+        font-family: "Times New Roman", Times, serif, serif;
+        font-size: 1.875rem;
+        color: $colorDarkGray;
+        color: $colorBlack;
+        cursor: pointer;
+        @include sm {
+            font-size: 1.75rem;
+        }
+        @include xs {
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+    }
+    .menuIconContainer {
+        z-index: 5;
+        @include whSet(2rem, 2rem, 0, 0);
+        @include position(fixed, $headerTop, unset);
+        right: 2rem;
+        cursor: pointer;
+        display: none;
+        @include md {
+            top: $mdHeaderTop;
+        }
+        @include sm {
+            top: $smHeaderTop;
+        }
+        @include s {
+            top: $sHeaderTop;
+        }
+        @include xs {
+            top: $xsHeaderTop;
+        }
+        .menuIcon {
+            @include whSet(2rem, 2rem, 0, 0);
+            @include flexSet(column, center, center);
+            position: relative;
+            overflow: hidden;
+            span {
+                @include whSet(1.5rem, 1px, 0, 0);
+                z-index: 4;
+                position: absolute;
+                background-color: $colorDarkGray;
+                transition: 0.2s;
+                transition: 0.5s;
+                cursor: pointer;
+                &:nth-child(1) {
+                    width: 0.8rem;
+                    left: 0.25rem;
+                    @include trans(translateY(-0.5rem), 0.2s);
+                }
+                &:nth-child(2) {
+                    @include trans(translateX(0), 0.2s);
+                }
+                &:nth-child(3) {
+                    width: 0.6rem;
+                    left: 0.25rem;
+                    @include trans(translateY(0.5rem), 0.2s);
+                }
+            }
+        }
+    }
+    .menuIconClick {
+        .menuIcon {
+            span {
+                &:nth-child(1) {
+                    width: 1.5rem;
+                    @include trans(translateY(0) rotate(45deg), 0.2s);
+                }
+                &:nth-child(2) {
+                    @include trans(translateX(2rem), 0.2s);
+                }
+                &:nth-child(3) {
+                    width: 1.5rem;
+                    @include trans(translateY(0) rotate(315deg), 0.2s);
+                }
+            }
+        }
+    }
+    .headerList {
+        margin-top: 90%;
+        @include flexSet(column, flex-end, flex-start);
+        // @include md {
+        //     margin-top: 0;
+        //     @include whSet(0, 0, 0, 0);
+        //     @include flexSet(column, flex-start, flex-start);
+        //     position: fixed;
+        //     right: 0;
+        //     top: 0;
+        //     background-color: aqua;
+        // }
+        ul {
+            @include whSet(100%, 100%, 0, 0);
+            li {
+                list-style-type: none;
+                margin-top: 2rem;
+                $max: 5;
+                @for $i from 1 through $max {
+                    &:nth-child(#{$i}) {
+                        animation: waveList 0.2s both ($i * 0.1s);
+                    }
+                }
+
+                a {
+                    font-family: didot-w01-italic, didot-w05-italic, serif;
+                    font-size: 1.25rem;
+                    text-decoration: none;
+                    color: $colorDarkGray;
+                    &:hover {
+                        color: $colorB;
+                        border-bottom: 1px solid $colorB;
+                    }
+                }
+            }
+        }
+    }
+    // .headerListClick {
+    //     @include whSet(100vw, 100vh, 0, 0);
+    //     display: block;
+    // }
+}
+$time: 0.4s;
+@include md {
+    .header {
+        z-index: 0;
+        .menuIconContainer {
+            display: block;
+        }
+        .headerList {
+            margin-top: 0;
+            @include whSet(0%, 100%, 0, 0);
+            @include flexSet(column, flex-start, flex-end);
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: rgba(82, 82, 82, 0.53);
+            opacity: 0;
+            transition: opacity $time ease-in-out, width 0.001s ease-in-out $time;
+
+            ul {
+                @include whSet(0, 100%, 0, 5rem 0 0 0%);
+                background-color: $colorWhite;
+                @include trans(translateX(100%), $time ease-out);
+                li {
+                    $max: 5;
+                    @for $i from 1 through $max {
+                        &:nth-child(#{$i}) {
+                            animation: unWaveList 0.2s both ($max - $i) * 0.025s;
+                        }
+                    }
+                }
+            }
+        }
+        .headerListClick {
+            width: 100%;
+            opacity: 1;
+            transition: opacity $time ease-in-out;
+            ul {
+                @include whSet(28%, 100%, 0, 5rem 0 0 4%);
+                @include trans(translateX(0), $time ease-out);
+                li {
+                    $max: 5;
+                    @for $i from 1 through $max {
+                        &:nth-child(#{$i}) {
+                            animation: waveList 0.2s both ($i * 0.1s);
+                            // animation: unWaveList .2s both ((6s/$i));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include sm {
+    .header {
+        .headerListClick {
+            ul {
+                width: 40%;
+            }
+        }
+    }
+}
+@include sm {
+    .header {
+        .headerListClick {
+            ul {
+                width: 40%;
+            }
+        }
+    }
+}
+@include xs {
+    .header {
+        .headerList {
+            text-align: center;
+        }
+        .headerListClick {
+            ul {
+                padding: 5rem 0 0 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@keyframes waveList {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -1.5rem, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes unWaveList {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -3rem, 0);
+    }
+}

@@ -1,0 +1,106 @@
+@mixin whSet($width, $height, $margin, $padding) {
+    width: $width;
+    height: $height;
+    margin: $margin;
+    padding: $padding;
+}
+@mixin flexSet($direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin position($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+@mixin trans($transform, $transition) {
+    transform: $transform;
+    transition: $transition;
+}
+@mixin titleBar {
+    @include whSet(100%, unset, 6.5rem 0 6rem, 0.5rem 0);
+    border-top: 1px solid $colorDarkGray;
+    border-bottom: 1px solid $colorDarkGray;
+    color: $colorDarkGray;
+    letter-spacing: 0.25rem;
+    font-style: italic;
+    text-align: center;
+    @include sm {
+        margin: 4.8rem 0 6rem;
+    }
+    @include s {
+        margin: 4rem 0 6rem;
+    }
+    @include xs {
+        margin: 3.8rem 0 3rem;
+    }
+}
+$border-radius: 1rem;
+$colorA: #969bb2cf;
+$colorA1:  #3e4857c0;
+$colorB: #99b6e0;
+$colorC: #e096a0;
+$colorBlack: #2e2e2e;
+$colorDarkGray: #5a5a5a;
+$colorGray: #7c7c7c;
+$colorLightGray: #c4c4c4;
+$colorWarn: #ff532c;
+$colorWarn2: #ff532c10;
+$colorWhite: #fff;
+
+$headerTop: 2.5rem;
+$mdHeaderTop: 2rem;
+$smHeaderTop:1.5rem;
+$sHeaderTop:1rem;
+$xsHeaderTop:.8rem;
+
+$loader_textAnimate:1.5s;
+$loader_scrollTime:0.5s;
+$loader_scrollTime_delay:3s;
+
+
+/* 筆電 lg */
+@mixin blg {
+    @media (max-width: 1365.98px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+/* 平板 md */
+@mixin md {
+    @media screen and (max-width: 991.98px) {
+        @content;
+    }
+}
+/* 手機 sm */
+
+@mixin sm {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+/* 小手機 s 目前僅footer及品牌故事使用*/
+@mixin s {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+/* 小小手機 xs */
+@mixin xs {
+    @media (max-width: 479.98px) {
+        @content;
+    }
+}
+/* 小小手機5/se  xxs */
+@mixin xxs {
+    @media (max-width: 374.98px) {
+        @content;
+    }
+}

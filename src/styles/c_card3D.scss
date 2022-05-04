@@ -1,0 +1,14 @@
+@import "./mixin.scss";
+.container3D {
+  width: 100%;
+  @include flexSet(row, center, center);
+  perspective: 500px;
+  @include md {
+    perspective: 300px;
+  }
+  .card3D {
+    width:100%;
+    transition: transform 0.2s ease-out;
+    touch-action: none;
+  }
+}

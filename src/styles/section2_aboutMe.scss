@@ -1,0 +1,240 @@
+@import "./mixin.scss";
+.section2 {
+    @include whSet(100%, unset, 0, 0);
+    @include flexSet(column, flex-start, center);
+    .title {
+        @include titleBar();
+    }
+    figure {
+        @include whSet(100%, unset, 0, 0 2rem 2rem);
+        @include flexSet(row, space-between, center);
+        @include sm {
+            @include flexSet(column, flex-start, center);
+            padding: 0 0rem 2rem;
+        }
+        .imgCardContainer {
+            width: 35%;
+            padding-left: 2rem;
+            @include sm {
+                width: 40%;
+                margin-right: 5%;
+            }
+            @include xs {
+                width: 60%;
+                margin-right: 0;
+            }
+            .imgCard {
+                position: relative;
+                width: 100%;
+                @include flexSet(row, flex-start, center);
+                
+                .beccaPhoto {
+                    @include whSet(100%, auto, 0, 0);
+                    transition: transform 0.5s ease;
+                    margin-right: 8%;
+                    * {
+                        width: 100%;
+                    }
+                    transform: scale(1);
+                    transition: all 0.5s ease;
+                    img{
+                        aspect-ratio: attr(1) / attr(1); 
+
+                    }
+
+                }
+                .photoCircle {
+                    @include position(absolute, -7%, 2%);
+                    @include whSet(100%, unset, 0, 0);
+                    z-index: -1;
+                    transform: scale(1.1) rotate(45deg);
+                    .dot1,
+                    .dot2,
+                    .dot3 {
+                        transition: all 0.3s ease;
+                    }
+                    .dot1 {
+                        opacity: 0.5;
+                    }
+                    .dot2 {
+                        opacity: 0.8;
+                    }
+                    .dot3 {
+                        opacity: 1;
+                    }
+                }
+                &:hover {
+                    .beccaPhoto {
+                        // transform: scale(1.2);
+                        // transition: all 0.5s ease;
+                        animation: photoScale 1s alternate-reverse infinite;
+                    }
+                    .photoCircle {
+                        // transform: scale(1.9) rotate(45deg);
+                        // transition: all 0.5s ease;
+                        animation: dotFlower 1s alternate-reverse infinite;
+                    }
+                }
+            }
+        }
+        figcaption {
+            @include whSet(57%, unset, 0, 0);
+            line-height: 2rem;
+            text-align: justify;
+            @include sm {
+                width: 70%;
+            }
+            @include s {
+                width: 60%;
+            }
+            @include xs {
+                width: 90%;
+            }
+            @include xxs {
+                width: 100%;
+            }
+            .hello {
+                text-align: start;
+                font-size: 2rem;
+                font-weight: 400;
+                color: $colorGray;
+                background: linear-gradient(to left, rgb(232, 143, 155), rgb(240, 163, 140));
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                margin: 1.5rem 0;
+                @include xs {
+                    text-align: center;
+                }
+            }
+            .btnList {
+                @include flexSet(row, flex-start, center);
+                list-style-type: none;
+                margin-top: 1rem;
+                // overflow: hidden;
+                @include xs {
+                    flex-wrap: wrap;
+                }
+                @include sm {
+                    justify-content: space-between;
+                }
+                .clickBtn {
+                    white-space: nowrap;
+                    @include whSet(unset, unset, 0 3rem 0 0, 0.5rem 0);
+                    @include lg {
+                        margin-right: 1.2rem;
+                        &:nth-last-child() {
+                            margin-right: 0;
+                        }
+                    }
+                    @include sm {
+                        margin-right: 0;
+                        &:nth-last-child() {
+                            margin-right: 0;
+                        }
+                    }
+                    @include xs {
+                        font-size: .8rem;
+                        letter-spacing: 0.08rem;
+                    }
+                }
+                
+            }
+        }
+    }
+    .pointTo {
+        font-size: 3rem;
+        font-weight: 100;
+        color: $colorC;
+        animation: bounce-down 1.6s linear infinite;
+    }
+    .downloadBtn {
+        margin-top: 0.5rem;
+        padding: 0.75rem 1.2rem;
+        border: 1.25px solid $colorC;
+        color: $colorC;
+        background-color: $colorWhite;
+        text-decoration: none;
+        font-weight: 400;
+        text-align: center;
+        @include md {
+            color: $colorWhite;
+            background-color: $colorC;
+            border: none;
+            background: linear-gradient(to left, rgb(239, 167, 192), rgb(236, 174, 155));
+        }
+        @include s {
+            padding: 0.4rem 1.2rem 0.75rem;
+        }
+        .sHidden {
+            font-weight: 400;
+            @include s {
+                display: none;
+            }
+        }
+        &:hover {
+            background-color: $colorC;
+            border: 1.25px solid $colorC;
+            color: $colorWhite;
+            @include md {
+                border: none;
+            }
+            .downloadIcon {
+                .pathLine {
+                    stroke: $colorWhite;
+                }
+            }
+        }
+        .downloadIcon {
+            margin-left: 0.5rem;
+            margin-bottom: -0.2rem;
+            position: relative;
+            @include md {
+                transform: scale(0.8);
+            }
+            @include s {
+                top: 0.2rem;
+            }
+            .pathLine {
+                fill: none;
+                stroke: $colorC;
+                stroke-width: 4;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+                @include md {
+                    stroke: $colorWhite;
+                }
+            }
+        }
+    }
+}
+@keyframes photoScale {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes dotFlower {
+    0%,
+    5% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1.1) rotate(45deg);
+    }
+}
+@keyframes bounce-down {
+    25% {
+        transform: translateY(-10px);
+    }
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}

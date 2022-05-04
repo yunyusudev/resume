@@ -1,0 +1,25 @@
+{
+  "short_name": "Rebecca Su",
+  "name": "Rebecca Su's Resume",
+  "icons": [
+    {
+      "src": "suIcon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "suIcon@192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "suIcon@512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

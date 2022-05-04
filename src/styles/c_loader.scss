@@ -1,0 +1,125 @@
+@import "./mixin.scss";
+$colorBG_lg: $colorB;
+$colorBG_md: $colorGray;
+$colorBG_s: $colorDarkGray;
+.sHide {
+    display: block;
+    @include s {
+        display: none;
+    }
+}
+.sShow {
+    display: none;
+    @include s {
+        display: block;
+    }
+}
+
+.loaderContainer {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $colorBG_lg;
+    animation: top $loader_scrollTime ease-out $loader_scrollTime_delay 1 normal both;
+    .loader {
+        @include whSet(100%, 100%, 0, 0);
+        background: radial-gradient($colorWhite 0.8px, transparent 0.5px);
+        background-size: 2rem 2rem, 100% 100%;
+        svg {
+            text {
+                filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.373)) drop-shadow(0 0 5px rgba(255, 255, 255, 0.373))
+                    drop-shadow(0 0 10px rgba(255, 255, 255, 0.373)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.373));
+                font-family: "Times New Roman", Times, serif, serif;
+                letter-spacing: 0.55rem;
+                stroke: #ffa5c3;
+                stroke: $colorWhite;
+                font-size: 9rem;
+                font-weight: 600;
+                stroke-width: 1;
+                animation: textStroke $loader_textAnimate ease-in-out 0s 3 alternate,
+                    textFill_lg $loader_scrollTime_delay ease-in-out 0s 1 alternate both;
+                fill: $colorBG_lg;
+                @include blg {
+                    font-size: 8rem;
+                }
+                @include lg {
+                    font-size: 7rem;
+                }
+                @include md {
+                    font-size: 5rem;
+                    stroke-width: 0.9;
+                }
+                @include sm {
+                    font-size: 5rem;
+                }
+                @include s {
+                    font-size: 4rem;
+                    stroke-width: 0.7;
+                }
+                @include xs {
+                    font-size: 4rem;
+                    stroke-width: 0.6;
+                }
+                @include xxs {
+                    font-size: 3rem;
+                    stroke-width: 0.6;
+                }
+            }
+            @include s {
+                filter: drop-shadow(0 0 0.1px rgba(255, 255, 255, 0.373));
+            }
+        }
+    }
+}
+
+@keyframes textStroke {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+    }
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: 20%;
+    }
+}
+@keyframes textFill_lg {
+    0% {
+        stroke: $colorWhite;
+        fill: transparent;
+        filter: drop-shadow(3px 3px 1px #43638f);
+    }
+    50% {
+        stroke: $colorWhite;
+        fill: transparent;
+    }
+    60% {
+        fill: transparent;
+        stroke: $colorWhite;
+        filter: drop-shadow(3px 3px 1px transparent);
+    }
+    100% {
+        stroke-dasharray: 20% 0;
+        stroke-dashoffstet: 20%;
+        fill: $colorWhite;
+        stroke: #85a3c9;
+    }
+}
+
+@keyframes top {
+    0% {
+        top: 0;
+        z-index: 3;
+    }
+
+    99% {
+        top: -100vh;
+        z-index: 3;
+
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -3;
+    }
+}

@@ -1,0 +1,252 @@
+@import "./mixin.scss";
+$mdPicWidth: 58%;
+$mdInfoWidth: 40%;
+.section4 {
+    @include whSet(100%, unset, 0, 0);
+    .title {
+        @include titleBar();
+    }
+    .portfolioContent {
+        @include whSet(100%, unset, 0, 0);
+
+        @include flexSet(row, space-between, flex-start);
+        flex-wrap: wrap;
+
+        .projectCard {
+            @include whSet(100%, unset, 0rem 0, 0);
+            min-height: calc(100vh - 6rem);
+            &:nth-child(even) {
+                .projectContent {
+                    @include flexSet(row-reverse, space-between, flex-start);
+                    @include lg {
+                        @include flexSet(column, flex-start, flex-start);
+                        margin-bottom: 2rem;
+                    }
+                    @include md {
+                        @include flexSet(row-reverse, space-between, flex-start);
+                    }
+                    @include sm {
+                        @include flexSet(column, flex-start, flex-start);
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+            &:last-child {
+                // @include whSet(100%, unset, 0, 0);
+                min-height: calc(100vh - 12.5rem);
+                @include lg {
+                    .lineBottom {
+                        display: none;
+                    }
+                }
+                @include md {
+                    .lineBottom {
+                        display: block;
+                    }
+                }
+                @include sm {
+                    .lineBottom {
+                        display: none;
+                    }
+                }
+            }
+            @include lg {
+                &:last-child {
+                    margin-bottom: -4rem;
+                }
+            }
+            @include md {
+                padding: 0 0 8rem;
+                min-height: unset;
+                &:last-child {
+                    min-height: unset;
+                    padding: 0 0 2rem;
+                    margin-bottom: -2rem;
+                }
+            }
+            @include sm {
+                padding: 0;
+                &:last-child {
+                    padding: 0;
+                    margin-bottom: -4rem;
+                }
+            }
+            @include xs {
+                &:last-child {
+                    padding: 0;
+                    margin-bottom: -5rem;
+                }
+            }
+            .projectContent {
+                @include flexSet(row, space-between, flex-start);
+                position: relative;
+                @include lg {
+                    @include flexSet(column, flex-start, flex-start);
+                    margin-bottom: 2rem;
+                }
+                @include md {
+                    @include flexSet(row, space-between, flex-start);
+                }
+                @include sm {
+                    @include flexSet(column, flex-start, flex-start);
+                    margin-bottom: 2rem;
+                }
+                .projectPhotoCon {
+                    @include whSet(68%, auto, 0, 0);
+                    position: relative;
+                    overflow: hidden;
+                    @include lg {
+                        width: 100%;
+                    }
+                    @include md {
+                        width: $mdPicWidth;
+                    }
+                    @include sm {
+                        width: 100%;
+                    }
+                    .projectPhoto1 {
+                        @include whSet(100%, auto, 0, 0);
+                        display: block;
+                        opacity: 1;
+                        transition: opacity 0.2s 0.05s;
+                        aspect-ratio: attr(650) / attr(421); 
+
+                    }
+                    .projectPhoto2 {
+                        // display: block;
+                        @include whSet(100%, auto, 0, 0);
+                        aspect-ratio: attr(650) / attr(421); 
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 0;
+                        transition: transform 0.2s ease-in, opacity 0.1s ease-out 0.2s;
+                    }
+                    &:hover {
+                        .projectPhoto1 {
+                            opacity: 0;
+                            transition: all 1s ease-in;
+                        }
+                        .projectPhoto2 {
+                            opacity: 1;
+                            transform: scale(1.2);
+                            transition: transform 0.5s ease-out;
+                        }
+                    }
+                }
+                .projectInfo {
+                    @include whSet(28%, unset, 0, 0 0.5rem);
+                    @include flexSet(column, space-between, flex-start);
+                    @include lg {
+                        width: 100%;
+                    }
+                    @include md {
+                        width: $mdInfoWidth;
+                        padding: 0;
+                    }
+                    @include sm {
+                        width: 100%;
+                    }
+                    .lineTop {
+                        width: 100%;
+                        border-top: 0.5px solid $colorGray;
+                        @include lg {
+                            display: none;
+                        }
+                        @include md {
+                            display: block;
+                        }
+                        @include sm {
+                            display: none;
+                        }
+                    }
+                    .projectType {
+                        color: $colorDarkGray;
+                        font-style: italic;
+                        margin: 3rem 0 0.4rem;
+                        white-space:nowrap;
+                        @include blg {
+                            margin-top: 2rem;
+                        }
+                        @include xs {
+                            margin-top: 1.5rem;
+                        }
+                    }
+                    .projectTitle {
+                        width: 100%;
+                        font-size: 1.5rem;
+                        color: $colorDarkGray;
+                        letter-spacing: 0.15rem;
+                    }
+                    .projectTxt {
+                        color: $colorDarkGray;
+                        margin: 3rem 0 5rem;
+                        letter-spacing: 0.1rem;
+                        line-height: 1.5rem;
+                        @include blg {
+                            margin: 2rem 0 6rem;
+                        }
+                        @include md {
+                            margin: 1.5rem 0 4.5rem;
+                        }
+                        @include sm {
+                            margin: 2rem 0 6rem;
+                        }
+                        @include xs {
+                            margin: 1rem 0 5rem;
+                        }
+                    }
+                    a{}.clickBtn {
+                        position: absolute;
+                        bottom: 3rem;
+                        font-size: 1.2rem;
+                        @include blg {
+                            right: unset;
+                        }
+                        @include lg {
+                            right: 0.5rem;
+                        }
+                        @include md {
+                            right: unset;
+                            bottom: 2rem;
+                        }
+                    }
+                    .liferoomLink{
+                        .clickBtn{
+                            left:6.5rem;
+                            @include lg {
+                                left:unset;
+                                right:6.5rem;
+                            }
+                            @include md {
+                                left:6rem;
+                                right:unset;
+                                bottom: 2rem;
+                            }
+                        }
+                        
+                    }
+                    .lineBottom {
+                        width: 28%;
+                        border-top: 0.5px solid $colorGray;
+                        position: absolute;
+                        bottom: 0;
+                        @include lg {
+                            width: 100%;
+                            margin-left: -0.5rem;
+                        }
+                        @include md {
+                            width: $mdInfoWidth;
+                            margin-left: 0;
+                        }
+                        @include sm {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
