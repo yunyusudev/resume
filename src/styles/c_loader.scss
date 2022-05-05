@@ -20,7 +20,6 @@ $colorBG_s: $colorDarkGray;
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: $colorBG_lg;
     animation: top $loader_scrollTime ease-out $loader_scrollTime_delay 1 normal both;
     .loader {
         @include whSet(100%, 100%, 0, 0);
@@ -38,7 +37,7 @@ $colorBG_s: $colorDarkGray;
                 font-weight: 600;
                 stroke-width: 1;
                 animation: textStroke $loader_textAnimate ease-in-out 0s 3 alternate,
-                    textFill_lg $loader_scrollTime_delay ease-in-out 0s 1 alternate both;
+                    textFill $loader_scrollTime_delay ease-in-out 0s 1 alternate both;
                 fill: $colorBG_lg;
                 @include blg {
                     font-size: 8rem;
@@ -83,7 +82,7 @@ $colorBG_s: $colorDarkGray;
         stroke-dashoffstet: 20%;
     }
 }
-@keyframes textFill_lg {
+@keyframes textFill {
     0% {
         stroke: $colorWhite;
         fill: transparent;
@@ -110,16 +109,19 @@ $colorBG_s: $colorDarkGray;
     0% {
         top: 0;
         z-index: 3;
+        background-color: $colorBG_lg;
     }
 
     99% {
         top: -100vh;
         z-index: 3;
+        background-color: $colorBG_lg;
 
         opacity: 1;
     }
     100% {
         opacity: 0;
         z-index: -3;
+        background-color: $colorWhite;
     }
 }

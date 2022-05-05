@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { canvasContainer } from './section1';
 
-const IndexFinger = () => {
+const IndexFinger = (props) => {
 	const canvasContainerInfo = useContext(canvasContainer);
 	const width = canvasContainerInfo.canvaWidth;
 	const height = canvasContainerInfo.canvaHeight;
 	return (
-		<div className="indexFingerContainer" width={width} height={height} >
-			<svg className="indexFingerSvg" version="1.1" viewBox="0 0 542.8 542.8">
+		<div className={props.className} width={width} height={height} >
+			<svg className="wipeAnimationSvg" version="1.1" viewBox="0 0 542.8 542.8">
 				<circle cx="271.4" cy="271.4" r="271.4" />
 				<path d="M260.3,207.6l-28.8-28.8c-6.5-7.4-7.2-19.4,0.3-26.9s17.3-7.9,26.7-0.2l27.7,27.9l-14.3-14.5
 	c-6.5-7.4-7.2-19.4,0.3-26.9c7.5-7.5,17.4-8,26.9-0.3l16.4,16.5L312,151c-6.5-7.4-7.3-19.2,0-26.6c7.3-7.3,17.1-7.8,26.6,0

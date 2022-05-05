@@ -15,16 +15,17 @@ import banner02_j_sm from "../image/index02-j-sm.jpg"
 import banner02_j_s from "../image/index02-j-s.jpg"
 import banner02_j_xs from "../image/index02-j-xs.jpg"
 
-import IndexFinger from './s1_indexFinger.js';
+import WipeAnimation from './s1_wipeAnimation.js';
 
 
-function Scratch() {
+function Wipe() {
   const [canvasClear, setCanvasClear] = useState(false);
   const [fixCancasFlickerState, setFixCancasFlickerState] = useState(false);
+  const [wipeState, setWipeState] = useState("wipeAnimationContainer wipeActive");
   const canvasRef = useRef();
   const lastPositionRef = useRef({ x: null, y: null });
   const drawSizeRef = useRef();
-
+  const windowSizeRef = useRef(window.innerWidth);
   const canvasContainerInfo = useContext(canvasContainer);
   const width = canvasContainerInfo.canvaWidth;
   const height = canvasContainerInfo.canvaHeight;
@@ -38,21 +39,21 @@ function Scratch() {
     const xs = window.matchMedia("(max-width:  479.98px)");
     const xxs = window.matchMedia("(max-width: 374.98px)");
     if (xxs.matches) {
-      return { drawSize: 50, canvasSrc: banner02_j_xs };
+      return { drawSize: 60, canvasSrc: banner02_j_xs };
     } else if (xs.matches) {
-      return { drawSize: 70, canvasSrc: banner02_j_xs };
+      return { drawSize: 80, canvasSrc: banner02_j_xs };
     } else if (s.matches) {
-      return { drawSize: 80, canvasSrc: banner02_j_s };
+      return { drawSize: 90, canvasSrc: banner02_j_s };
     } else if (sm.matches) {
       return { drawSize: 100, canvasSrc: banner02_j_sm };
     } else if (md.matches) {
-      return { drawSize: 120, canvasSrc: banner02_j_lg };
+      return { drawSize: 130, canvasSrc: banner02_j_lg };
     } else if (lg.matches) {
-      return { drawSize: 115, canvasSrc: banner02_j_lg };
+      return { drawSize: 140, canvasSrc: banner02_j_lg };
     } else if (blg.matches) {
-      return { drawSize: 120, canvasSrc: banner02_j_lg };
+      return { drawSize: 150, canvasSrc: banner02_j_lg };
     } else {
-      return { drawSize: 180, canvasSrc: banner02_w_max };
+      return { drawSize: 220, canvasSrc: banner02_w_max };
     };
   }
 
@@ -171,8 +172,12 @@ function Scratch() {
   }, [drawDot, getBrushPos]);
 
   const handleResize = useCallback(() => {
-    setFixCancasFlickerState(true);
-    setCanvasClear(false);
+    const windowNewSize = window.innerWidth;
+    if (windowSizeRef.current !== windowNewSize) {
+      setWipeState("wipeAnimationContainer");
+      setFixCancasFlickerState(true);
+      setCanvasClear(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -184,7 +189,7 @@ function Scratch() {
       try {
         var options = Object.defineProperty({}, "passive", {
           get: function () {
-           return passiveSupported = true;
+            return passiveSupported = true;
           }
         });
         window.addEventListener("test", null, options);
@@ -232,7 +237,6 @@ function Scratch() {
               }
             ]}
             alt="banner"
-
           />
         </>) : (<>
           <Picture
@@ -260,11 +264,11 @@ function Scratch() {
             ]}
             alt="banner"
           /></>)}
-        <IndexFinger />
+        <WipeAnimation className={wipeState}/>
       </figure>
     </>
   )
 };
 
-export default Scratch;
+export default Wipe;
 

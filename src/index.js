@@ -21,7 +21,6 @@ import "./styles/c_card3D.scss"
 import "./styles/c_loader.scss"
 import "./styles/s1_indexFinger.scss"
 
-
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
 root.render(<App/>);

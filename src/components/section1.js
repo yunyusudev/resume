@@ -12,7 +12,7 @@ import banner01_j_sm from "../image/index01-j-sm.jpg"
 import banner01_j_s from "../image/index01-j-s.jpg"
 import banner01_j_xs from "../image/index01-j-xs.jpg"
 
-import Scratch from './s1_scratch.js';
+import Wipe from './s1_wipe.js';
 import React, { useRef, useEffect, useReducer, useCallback } from 'react';
 export const canvasContainer = React.createContext();
 
@@ -28,13 +28,12 @@ const reducer = (state, action) => {
 
 function Section1() {
     const [sizes, dispatch] = useReducer(reducer, initialState);
+    const bannerRef = useRef()
 
     function reSetBannerSize(banner) {
         const { width, height } = banner.getBoundingClientRect();
         dispatch({ type: 'DRAW', width: width+.8, height: height-2.8203125, onloaded: true });
     }
-
-
     const getBannerSizeToSetCanvasSize = useCallback(() => {
         const banner = bannerRef.current;
         const bgBanner = bannerRef.current.firstChild.lastChild;
@@ -46,9 +45,6 @@ function Section1() {
             reSetBannerSize(banner);
         }
     }, []);
-
-    const bannerRef = useRef()
-
 
     useEffect(() => {
         getBannerSizeToSetCanvasSize();
@@ -113,7 +109,7 @@ function Section1() {
                         ]}
                         alt="banner"
                     /></>)}
-                <Scratch />
+                <Wipe />
             </figure>
         </canvasContainer.Provider>
     </>
