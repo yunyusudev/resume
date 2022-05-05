@@ -19,7 +19,7 @@ import "./styles/footer.scss";
 import "./styles/c_clickBtn.scss";
 import "./styles/c_card3D.scss"
 import "./styles/c_loader.scss"
-import "./styles/s1_indexFinger.scss"
+import "./styles/s1_wipeAnimation.scss"
 
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
