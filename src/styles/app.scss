@@ -18,22 +18,25 @@
         }
         @include md {
             @include position(fixed, 0, 0);
-            @include whSet(100%, unset, 0, $mdHeaderTop 2rem 1.75rem 2rem);
+            @include whSet(100%, $mdHeaderHeight, 0, $mdHeaderTop 2rem 1.75rem 2rem);
             @include flexSet(row, center, flex-start);
             z-index: 1;
             background-color: $colorWhite;
             box-shadow: 0px 2.1rem 5px -2.1rem rgba(49, 49, 49, 0.736);
         }
         @include sm {
-            @include whSet(100%, unset, 0, $smHeaderTop 2rem 1.25rem 2rem);
+            @include whSet(100%, $smHeaderHeight, 0, $smHeaderTop 2rem 1.25rem 2rem);
+        }
+        @include s {
+            @include whSet(100%, $xsHeaderHeight, 0, $sHeaderTop 2rem 1rem 2rem);
+            box-shadow: 0px -1rem 5px 1rem rgba(49, 49, 49, 0.736);
         }
         @include s {
             @include whSet(100%, unset, 0, $sHeaderTop 2rem 1rem 2rem);
-            box-shadow: 0px -1rem 5px 1rem rgba(49, 49, 49, 0.736);
         }
     }
     main {
-        @include whSet(74%, unset, 0, $headerTop 2rem 0);
+        @include whSet(74%, unset, 0, 6rem 2rem 0);
         @include flexSet(column, space-between, center);
         .lineBox {
             @include whSet(74%, 6rem, 0, 0 2rem);
@@ -54,7 +57,7 @@
             }
         }
         @include lg {
-            @include whSet(72%, unset, 0, $headerTop 2rem 0);
+            @include whSet(72%, unset, 0, 6rem 2rem 0);
         }
         @include md {
             @include whSet(100%, unset, 0, $smHeaderTop 2rem 0);
@@ -66,7 +69,6 @@
     aside {
         @include whSet(8%, unset, 0, 0 0 0 0);
         @include flexSet(column, flex-end, center);
-
         .svgLogo {
             @include whSet(3rem, 3rem, 0, $headerTop 1rem 0 0);
             position: fixed;

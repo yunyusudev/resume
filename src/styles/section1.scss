@@ -2,7 +2,6 @@
 $canvasHiddenTime: 0.5s;
 main {
     .section1 {
-        padding-top: 5rem;
         width: 100%;
         min-height: calc(100vh - 6rem);
         .banner {
@@ -13,6 +12,7 @@ main {
                 @include position(relative, -5%, 0);
                 z-index: -1;
                 aspect-ratio: attr(400) / attr(317); 
+                display: block;
             }
             @include md {
                 height: unset;
@@ -20,12 +20,10 @@ main {
             .bannerUp {
                 @include position(absolute, 0, 0);
                 cursor: crosshair;
-                // cursor: url(../image/cursor-lg.cur) 44 44.05, crosshair;
                 .canvas {
                     opacity: 1;
                     z-index: unset;
                     transition: opacity $canvasHiddenTime ease-in-out, index 0.001s ease-in-out $canvasHiddenTime;
-                    // transition: opacity 1.2s ease-in-out;
                     touch-action: none;
                 }
                 .canvasHidden {

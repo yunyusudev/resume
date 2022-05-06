@@ -81,7 +81,7 @@ const portfolioData  = [
     {
         title: '蘇韻宇簡歷網站',
         type: 'Web Development',
-        txt: '網站以動畫開頭破題，並以塗抹效果與使用者互動，象徵在在前端網站作品之下，富含原始身為設計師的底蘊。',
+        txt: '網站以動畫開頭破題，並以塗抹效果與使用者互動，象徵在前端網站作品之下，富含設計背景的底蘊。',
         link: 'https://yunyusudev.github.io/resume/',
         file1Webp :[
             {

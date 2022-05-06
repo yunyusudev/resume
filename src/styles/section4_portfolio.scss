@@ -113,7 +113,6 @@ $mdInfoWidth: 40%;
 
                     }
                     .projectPhoto2 {
-                        // display: block;
                         @include whSet(100%, auto, 0, 0);
                         aspect-ratio: attr(650) / attr(421); 
                         position: absolute;
@@ -170,7 +169,7 @@ $mdInfoWidth: 40%;
                         @include blg {
                             margin-top: 2rem;
                         }
-                        @include xs {
+                        @include md {
                             margin-top: 1.5rem;
                         }
                     }
@@ -198,7 +197,7 @@ $mdInfoWidth: 40%;
                             margin: 1rem 0 5rem;
                         }
                     }
-                    a{}.clickBtn {
+                    .clickBtn {
                         position: absolute;
                         bottom: 3rem;
                         font-size: 1.2rem;
@@ -210,7 +209,8 @@ $mdInfoWidth: 40%;
                         }
                         @include md {
                             right: unset;
-                            bottom: 2rem;
+                            bottom: 1.5rem;
+                            padding-bottom: .25rem;
                         }
                     }
                     .liferoomLink{
@@ -223,7 +223,7 @@ $mdInfoWidth: 40%;
                             @include md {
                                 left:6rem;
                                 right:unset;
-                                bottom: 2rem;
+                                bottom: 1.5rem;
                             }
                         }
                         

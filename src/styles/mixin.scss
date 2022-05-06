@@ -27,14 +27,17 @@
     letter-spacing: 0.25rem;
     font-style: italic;
     text-align: center;
+    @include md {
+        margin: $mdHeaderHeight 0 6rem;
+    }
     @include sm {
-        margin: 4.8rem 0 6rem;
+        margin: $smHeaderHeight 0 6rem;
     }
     @include s {
-        margin: 4rem 0 6rem;
+        margin: $sHeaderHeight 0 6rem;
     }
     @include xs {
-        margin: 3.8rem 0 3rem;
+        margin: $xsHeaderHeight 0 3rem;
     }
 }
 $border-radius: 1rem;
@@ -55,6 +58,13 @@ $mdHeaderTop: 2rem;
 $smHeaderTop:1.5rem;
 $sHeaderTop:1rem;
 $xsHeaderTop:.8rem;
+
+
+$mdHeaderHeight:6rem;
+$smHeaderHeight:4.8rem;
+$sHeaderHeight:4.1rem;
+$xsHeaderHeight:3.73rem;
+
 
 $loader_textAnimate:1.5s;
 $loader_scrollTime:0.5s;

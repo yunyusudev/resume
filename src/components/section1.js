@@ -32,7 +32,7 @@ function Section1() {
 
     function reSetBannerSize(banner) {
         const { width, height } = banner.getBoundingClientRect();
-        dispatch({ type: 'DRAW', width: width+.8, height: height-2.8203125, onloaded: true });
+        dispatch({ type: 'DRAW', width: width, height: height, onloaded: true });
     }
     const getBannerSizeToSetCanvasSize = useCallback(() => {
         const banner = bannerRef.current;
