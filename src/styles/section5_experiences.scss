@@ -22,12 +22,15 @@
         .ListContainer {
             padding: 3rem 0;
             border-bottom: 0.75px solid $colorLightGray;
-            
+            text-align:justify;
             &:first-child {
                 padding: 0 0 3rem;
             }
             &:last-child {
                 border: none;
+                .ListDetail{
+                    padding-bottom: 0rem;
+                }
             }
             .ListTitle {
                 margin-bottom: 3rem;

@@ -56,6 +56,18 @@
                 border: 0;
             }
         }
+        .section1 {
+            max-height: calc(100vh - 6rem);
+            overflow: hidden;
+            margin-bottom: -2rem;
+            @include md {
+                max-height: calc(100vh - 4.8rem);
+            }
+            @include s {
+                max-height: calc(100vh - 4.1rem);
+            }
+        }
+
         @include lg {
             @include whSet(72%, unset, 0, 6rem 2rem 0);
         }

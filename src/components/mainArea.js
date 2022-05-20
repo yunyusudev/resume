@@ -12,7 +12,7 @@ function MainArea() {
         <main id="Top">
             <div className="lineBox"><hr className="line" /></div>
             <section className="section1">
-            <Section1 />
+                <Section1 />
             </section>
             <section className="section2" id="AboutMe">
                 <AboutMe />
@@ -30,9 +30,9 @@ function MainArea() {
                 <Contact />
             </section>
             <Footer />
-            {/* <BackToTop /> */}
         </main>
     )
 }
+
 
 export default MainArea;

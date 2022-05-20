@@ -9,16 +9,16 @@ main {
             overflow: hidden;
             img {
                 @include whSet(100%, unset, 0, 0);
-                @include position(relative, -5%, 0);
+                @include position(relative, -2.5rem, 0);
                 z-index: -1;
-                aspect-ratio: attr(400) / attr(317); 
+                aspect-ratio: attr(400) / attr(317);
                 display: block;
             }
             @include md {
                 height: unset;
             }
             .bannerUp {
-                @include position(absolute, 0, 0);
+                @include position(absolute, -2.5rem, 0);
                 cursor: crosshair;
                 .canvas {
                     opacity: 1;
@@ -34,7 +34,7 @@ main {
                 .fixCancasFlickerPic {
                     display: block;
                     @include position(absolute, 0, 0);
-                    aspect-ratio: attr(400) / attr(317); 
+                    aspect-ratio: attr(400) / attr(317);
                 }
                 .hidden {
                     z-index: -2;
@@ -57,4 +57,3 @@ main {
         }
     }
 }
-
