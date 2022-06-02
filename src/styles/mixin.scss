@@ -96,7 +96,7 @@ $loader_scrollTime_delay:3s;
         @content;
     }
 }
-/* 小手機 s 目前僅footer及品牌故事使用*/
+/* 小手機 s */
 @mixin s {
     @media (max-width: 575.98px) {
         @content;
@@ -108,7 +108,7 @@ $loader_scrollTime_delay:3s;
         @content;
     }
 }
-/* 小小手機5/se  xxs */
+/* 小小手機  xxs */
 @mixin xxs {
     @media (max-width: 374.98px) {
         @content;

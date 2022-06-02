@@ -4,6 +4,14 @@ import ClickBtn from "./c_clickBtn"
 import portfolioData from "./s4_portfolioData"
 
 function Project(props) {
+    let items=props.txt;
+    console.log(items);
+    // let projectTxtArry =[2,3,4];
+    let projectTxtArry = items.map((i) =>
+        <div className='projectTxtItem' key={i.item}>{i.item}</div>
+        // console.log(i)
+    );
+    console.log(props.txt);
     return (
         <figure className="projectCard">
             <span className="projectContent">
@@ -36,7 +44,7 @@ function Project(props) {
                     <hr className="lineTop" />
                     <p className="projectType">{props.type}</p>
                     <p className="projectTitle">{props.title}</p>
-                    <p className="projectTxt">{props.txt}</p>
+                    <p className="projectTxt">{projectTxtArry}</p>
                     <a href={props.link} target="_blank" rel="noopener noreferrer">
                         <ClickBtn txt="View" />
                     </a>

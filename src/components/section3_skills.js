@@ -11,15 +11,15 @@ function Skills() {
         switch (skill_names[i]) {
             // case "網站視覺設計":
             case "Web Design":
-                skill_items = ["HTML5", "CSS3", "SCSS", "RWD", "Bootstrap5", "AdobeXD", "Figma", "Dreamweaver"];
+                skill_items = ["Html5", "Css3", "Scss", "Rwd", "Bootstrap5", "AdobeXD", "Figma", "Dreamweaver"];
                 break;
             case "Front-end":
                 // case "網頁前端功能":
-                skill_items = ["JavaScript", "AJAX", "jQuery", "Webpack", "React", "Redux", "SourceTree", "Github"];
+                skill_items = ["JavaScript", "Ajax", "jQuery", "Webpack", "React", "Redux", "SourceTree", "Github"];
                 break;
             case "Back-end":
                 // case "網站後端串接":
-                skill_items = ["PHP7", "MySQL"];
+                skill_items = ["Php7", "MySQL"];
                 break;
             case "Commercial Design":
                 // case "商業設計領域":

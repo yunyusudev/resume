@@ -3,7 +3,7 @@ import ScrollSpy from 'react-scrollspy-navigation';
 import goScrollTo from "../hooks/goScrollTo"
 
 
-const HeaderListItem = forwardRef(({ href, text, onClick, transition }, ref) => (
+const HeaderListItem = forwardRef(({ href, text, onClick }, ref) => (
     <li><a ref={ref} href={href} onClick={onClick}>
         {text}
     </a></li>
@@ -35,9 +35,9 @@ function Header() {
                         <HeaderListItem href="#Experiences" text="Experiences" ref={createRef()} />
                         <HeaderListItem href="#Contact" text="Contact" ref={createRef()} />
                     </ScrollSpy>
-                </ul>
-            </div>
-        </header>
+                </ul >
+            </div >
+        </header >
     )
 }
 

@@ -5,7 +5,7 @@
     .title {
         @include titleBar();
     }
-    .ExpContainer {
+    .expContainer {
         @include whSet(100%, unset, 0, 0rem 6rem 4rem);
         @include lg {
             padding:  0rem 5rem 4rem;
@@ -17,6 +17,9 @@
             padding:  0rem 3rem 4rem;
         }
         @include s {
+            padding:  0rem 1rem 4rem;
+        }
+        @include xs {
             padding:  0rem 1rem 4rem;
         }
         .ListContainer {

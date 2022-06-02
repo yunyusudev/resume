@@ -196,6 +196,14 @@ $mdInfoWidth: 40%;
                         @include xs {
                             margin: 1rem 0 5rem;
                         }
+                        .projectTxtItem{
+                            margin-left: 1.5rem;
+                            text-indent : -1.4em ;
+                            &:nth-last-child(1){
+                                margin-left: unset;
+                            text-indent : unset;
+                            }
+                        }
                     }
                     .clickBtn {
                         position: absolute;

@@ -38,6 +38,8 @@
         }
         @include xs {
             top: $xsHeaderTop;
+            right: 1.5rem;
+
         }
         .menuIcon {
             @include whSet(2rem, 2rem, 0, 0);

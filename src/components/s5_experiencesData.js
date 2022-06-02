@@ -76,13 +76,13 @@ const experiencesData = [
                 detail: [
                     // "培訓內容涵蓋網站企劃、網頁視覺設計、影像處理、前端技巧訓練及後端邏輯概念，並著重於前端開發部分。",
 
-                    "軟體操作 | AdobeXD、Dreamweaver、PhotoShop、VScode",
+                    "軟體操作 | AdobeXD、Dreamweaver、PhotoShop、VSCode",
 
-                    "視覺設計 | 影像編修技巧、網站視覺設計、app介面設計",
+                    "視覺設計 | 影像編修技巧、網站視覺設計、App介面設計",
 
-                    "前端技能 | HTML&CSS網頁設計、響應式網頁設計實務、JQuery / Bootstrap 前端應用",
+                    "前端技能 | Html&Css網頁設計、響應式網頁設計實務、JQuery / Bootstrap 前端應用",
 
-                    "後端概念 | PHP +  MySQL動態資料庫網站"
+                    "後端概念 | Php +  MySQL動態資料庫網站"
                 ]
             }
         ],

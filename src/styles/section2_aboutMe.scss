@@ -103,7 +103,12 @@
                 -webkit-background-clip: text;
                 color: transparent;
                 margin: 1.5rem 0;
+                @include md {
+                    text-align: center;
+                }
                 @include xs {
+                    font-size: 1.8rem;
+
                     text-align: center;
                 }
             }
@@ -157,6 +162,7 @@
         text-decoration: none;
         font-weight: 400;
         text-align: center;
+        
         @include md {
             color: $colorWhite;
             background-color: $colorC;
@@ -164,13 +170,32 @@
             background: linear-gradient(to left, rgb(239, 167, 192), rgb(236, 174, 155));
         }
         @include s {
-            padding: 0.4rem 1.2rem 0.75rem;
+            margin-top: 0.6rem;
+            padding: 0.4rem 1.2rem 0.65rem;
+        }
+        @include xs {
+            letter-spacing: 0.08rem;
+        }
+        @include xxs {
+            letter-spacing: 0.15rem;
         }
         .sHidden {
             font-weight: 400;
             @include s {
                 display: none;
             }
+        }
+        .xxsHidden{
+            font-weight: 400;
+
+            @include xxs {
+                display: none;
+            }
+        }
+        .fixHeight{
+            letter-spacing: -.1rem;
+            margin-right: -.1px;
+            color: transparent;
         }
         &:hover {
             background-color: $colorC;
@@ -193,7 +218,8 @@
                 transform: scale(0.8);
             }
             @include s {
-                top: 0.2rem;
+                margin-top: .2rem;
+                top: 0.1rem;
             }
             .pathLine {
                 fill: none;

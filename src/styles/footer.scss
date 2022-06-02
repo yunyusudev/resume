@@ -18,9 +18,14 @@ footer {
             letter-spacing: 0.1rem;
             font-family: "Times New Roman", Times, serif, serif;
             color: $colorGray;
+            line-height: 1.2rem;
             @include flexSet(row, space-between, center);
             @include s {
                 text-align: center;
+            }
+            @include xs {
+                font-size: 0.6rem;
+                line-height: 1.1rem;
             }
         }
     }

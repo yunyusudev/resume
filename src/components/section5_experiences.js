@@ -29,7 +29,7 @@ function Experiences() {
     }).reverse();
     return (<>
         <h2 className="title">Experiences</h2>
-        <div className="ExpContainer">
+        <div className="expContainer">
             {expArrary}
         </div>
     </>)

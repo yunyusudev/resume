@@ -73,7 +73,7 @@ function AboutMe() {
                     </div>
                 </div>
             <figcaption>
-                <h2 className="hello">Hello, I'm Rebecca! </h2>
+                <h2 className="hello">Hello,I'm Rebecca! </h2>
                 <p>擁有邏輯脈絡性思維的理性，同時具有想像力及探索未知的感性；喜歡傳遞生活中的美好。</p>
                 <ul className="btnList">
                     <li onClick={() => handleScroll('#Skills')}><ClickBtn txt="Skills" /></li>
@@ -83,8 +83,8 @@ function AboutMe() {
             </figcaption>
         </figure>
         <div className="pointTo">☟</div>
-        <a href={file} className="downloadBtn" download="RececcaSu_resume.pdf">
-            Click to Download <span className="sHidden">RececcaSu's </span>Resume
+        <a href={file} className="downloadBtn" download="RebeccaSu_resume.pdf">
+        <span className="xxsHidden">Click to </span>Download <span className="sHidden">RebeccaSu's </span>Resume<span className="fixHeight">'</span>
             <DownloadIcon />
         </a>
     </>

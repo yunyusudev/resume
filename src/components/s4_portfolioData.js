@@ -74,16 +74,22 @@ import p6_2_j_s from "../image/-section4/s4-p6_2-j-s.jpg";
 import p6_2_j_xs from "../image/-section4/s4-p6_2-j-xs.jpg";
 
 
-const xs="(max-width: 479.98px)";
-const s="(max-width: 575.98px)";
+const xs = "(max-width: 479.98px)";
+const s = "(max-width: 575.98px)";
 
-const portfolioData  = [
+const portfolioData = [
     {
         title: '蘇韻宇簡歷網站',
         type: 'Web Development',
-        txt: '網站以動畫開頭破題，並以塗抹效果與使用者互動，象徵在前端網站作品之下，富含設計背景的底蘊。',
+        txt: [
+            { item: '✓ Html5｜Css3｜Rwd' },
+            { item: '✓ React.js'},
+            { item: '✓ Create React App' },
+            { item: '✓ useReducer（with useReducer、createContext、useContext）' },
+            { item: '✓ SourceTree｜Github' }
+        ],
         link: 'https://yunyusudev.github.io/resume/',
-        file1Webp :[
+        file1Webp: [
             {
                 srcSet: p0_1_w_xs,
                 media: xs,
@@ -99,7 +105,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file2Webp :[
+        file2Webp: [
             {
                 srcSet: p0_2_w_xs,
                 media: xs,
@@ -115,7 +121,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file1Jpg:[
+        file1Jpg: [
             {
                 srcSet: p0_1_j_xs,
                 media: xs,
@@ -128,7 +134,7 @@ const portfolioData  = [
                 srcSet: p0_1_j,
             }
         ],
-        file2Jpg :[
+        file2Jpg: [
             {
                 srcSet: p0_2_j_xs,
                 media: xs,
@@ -145,10 +151,16 @@ const portfolioData  = [
     {
         title: '家居品牌前台官網',
         type: 'Web Development(2人協作)',
-        txt: '品牌網站以清新溫暖的圖文色彩配置，請選用浪漫低調的襯線字體點綴，營造出和諧、溫馨的氛圍。在不同的裝置上瀏覽時能夠自動調整成適合的排版呈現。',
+        txt: [
+            { item: '✓ Html5｜Css3｜Rwd' },
+            { item: '✓ JavaScript | Ajax' },
+            { item: '✓ Php7' },
+            { item: '✓ MySQL' },
+            { item: '✓ 系統文件 ( 前&後台 )' }
+        ],
         // link: 'https://reurl.cc/annN64',
-        link:'http://liferoomdesign.byethost15.com/',
-        file1Webp :[
+        link: 'http://liferoomdesign.byethost15.com/',
+        file1Webp: [
             {
                 srcSet: p1_1_w_xs,
                 media: xs,
@@ -164,7 +176,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file2Webp :[
+        file2Webp: [
             {
                 srcSet: p1_2_w_xs,
                 media: xs,
@@ -180,7 +192,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file1Jpg:[
+        file1Jpg: [
             {
                 srcSet: p1_1_j_xs,
                 media: xs,
@@ -193,7 +205,7 @@ const portfolioData  = [
                 srcSet: p1_1_j,
             }
         ],
-        file2Jpg :[
+        file2Jpg: [
             {
                 srcSet: p1_2_j_xs,
                 media: xs,
@@ -210,9 +222,16 @@ const portfolioData  = [
     {
         title: '家居品牌後台系統',
         type: 'Web Development(2人協作)',
-        txt: '品牌後台針對使用者心理，選用能與前台做出區別、具有令人沉著穩重的藍色為主色系。簡易明瞭的版型設計，讓使用者輕鬆處理事務。',
-        link:'https://reurl.cc/ErrZkv',
-        file1Webp :[
+        txt: [
+            { item: '✓ Html5｜Css3｜Rwd' },
+            { item: '✓ Bootstrap5' },
+            { item: '✓ JavaScript | Ajax' },
+            { item: '✓ Php7' },
+            { item: '✓ MySQL' },
+            { item: '✓ 系統文件 ( 前&後台 )' }
+        ],
+        link: 'https://reurl.cc/ErrZkv',
+        file1Webp: [
             {
                 srcSet: p2_1_w_xs,
                 media: xs,
@@ -228,7 +247,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file2Webp :[
+        file2Webp: [
             {
                 srcSet: p2_2_w_xs,
                 media: xs,
@@ -244,7 +263,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file1Jpg:[
+        file1Jpg: [
             {
                 srcSet: p2_1_j_xs,
                 media: xs,
@@ -257,7 +276,7 @@ const portfolioData  = [
                 srcSet: p2_1_j,
             }
         ],
-        file2Jpg :[
+        file2Jpg: [
             {
                 srcSet: p2_2_j_xs,
                 media: xs,
@@ -274,9 +293,15 @@ const portfolioData  = [
     {
         title: '台灣天氣搜App',
         type: 'API Practice',
-        txt: '簡單明瞭的版型及操作，讓使用者能隨時查詢台灣各地區當下的天氣狀況，App主題色彩更會隨著日出日做做改變。',
-        link:'https://yunyusudev.github.io/taiwan-weather-app/',
-        file1Webp :[
+        txt: [
+            { item: '✓ Html5｜Rwd' },
+            { item: '✓ React.js' },
+            { item: '✓ Styled-Component' },
+            { item: '✓ Create React App' },
+            { item: '✓ SourceTree｜Github' }
+        ],
+        link: 'https://yunyusudev.github.io/taiwan-weather-app/',
+        file1Webp: [
             {
                 srcSet: p6_1_w_xs,
                 media: xs,
@@ -292,7 +317,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file2Webp :[
+        file2Webp: [
             {
                 srcSet: p6_2_w_xs,
                 media: xs,
@@ -308,7 +333,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file1Jpg:[
+        file1Jpg: [
             {
                 srcSet: p6_1_j_xs,
                 media: xs,
@@ -321,7 +346,7 @@ const portfolioData  = [
                 srcSet: p6_1_j,
             }
         ],
-        file2Jpg :[
+        file2Jpg: [
             {
                 srcSet: p6_2_j_xs,
                 media: xs,
@@ -338,9 +363,11 @@ const portfolioData  = [
     {
         title: '保養品品牌App',
         type: 'UI Design',
-        txt: '依據品牌原有形像規劃，適當運明的品牌色彩及區塊陰影增加畫面層次。清新、質感、易操作且為主要特色，搭配俐落的圖示引導及互動回饋，提升使用者的使用體驗。',
-        link:'https://reurl.cc/vddgre',
-        file1Webp :[
+        txt: [
+            {item:'依據品牌原有形像規劃，適當運明的品牌色彩及區塊陰影增加畫面層次。清新、質感、易操作且為主要特色，搭配俐落的圖示引導及互動回饋，提升使用者的使用體驗。'}
+        ],
+        link: 'https://reurl.cc/vddgre',
+        file1Webp: [
             {
                 srcSet: p3_1_w_xs,
                 media: xs,
@@ -356,7 +383,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file2Webp :[
+        file2Webp: [
             {
                 srcSet: p3_2_w_xs,
                 media: xs,
@@ -372,7 +399,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file1Jpg:[
+        file1Jpg: [
             {
                 srcSet: p3_1_j_xs,
                 media: xs,
@@ -385,7 +412,7 @@ const portfolioData  = [
                 srcSet: p3_1_j,
             }
         ],
-        file2Jpg :[
+        file2Jpg: [
             {
                 srcSet: p3_2_j_xs,
                 media: xs,
@@ -408,9 +435,9 @@ const portfolioData  = [
     {
         title: '平面設計作品集',
         type: 'Commercial Design',
-        txt: '',
-        link:'https://reurl.cc/ErrZAg',
-        file1Webp :[
+        txt: [{ item: '' }],
+        link: 'https://reurl.cc/ErrZAg',
+        file1Webp: [
             {
                 srcSet: p5_1_w_xs,
                 media: xs,
@@ -426,7 +453,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file2Webp :[
+        file2Webp: [
             {
                 srcSet: p5_1_w_xs,
                 media: xs,
@@ -442,7 +469,7 @@ const portfolioData  = [
                 type: "image/webp",
             }
         ],
-        file1Jpg:[
+        file1Jpg: [
             {
                 srcSet: p5_1_j_xs,
                 media: xs,
@@ -455,7 +482,7 @@ const portfolioData  = [
                 srcSet: p5_1_j,
             }
         ],
-        file2Jpg :[
+        file2Jpg: [
             {
                 srcSet: p5_1_j_xs,
                 media: xs,
