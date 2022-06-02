@@ -6,9 +6,8 @@ import portfolioData from "./s4_portfolioData"
 function Project(props) {
     let items=props.txt;
     let projectTxtArry = items.map((i) =>
-        <div className='projectTxtItem' key={i.item}>{i.item}</div>
+        <p className='projectTxtItem' key={i.item}>{i.item}</p>
     );
-    console.log(props.txt);
     return (
         <figure className="projectCard">
             <span className="projectContent">
@@ -41,7 +40,7 @@ function Project(props) {
                     <hr className="lineTop" />
                     <p className="projectType">{props.type}</p>
                     <p className="projectTitle">{props.title}</p>
-                    <p className="projectTxt">{projectTxtArry}</p>
+                    <div className="projectTxt">{projectTxtArry}</div>
                     <a href={props.link} target="_blank" rel="noopener noreferrer">
                         <ClickBtn txt="View" />
                     </a>
