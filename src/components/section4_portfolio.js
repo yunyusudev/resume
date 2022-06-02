@@ -5,11 +5,8 @@ import portfolioData from "./s4_portfolioData"
 
 function Project(props) {
     let items=props.txt;
-    console.log(items);
-    // let projectTxtArry =[2,3,4];
     let projectTxtArry = items.map((i) =>
         <div className='projectTxtItem' key={i.item}>{i.item}</div>
-        // console.log(i)
     );
     console.log(props.txt);
     return (
