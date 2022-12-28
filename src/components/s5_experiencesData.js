@@ -9,12 +9,7 @@ const experiencesData = [
             },
             {
                 year: "2014 - 2017",
-                content: "亞洲大學 | 增修：創意領導學程 大學",
-                detail: []
-            },
-            {
-                year: "2014 - 2017",
-                content: "亞洲大學 | 增修：幼兒潛能開發學程 大學",
+                content: "亞洲大學 | 增修：創意領導學程、幼兒潛能開發學程 大學",
                 detail: []
             },
             {
@@ -26,8 +21,39 @@ const experiencesData = [
         ],
     },
     {
+        listtitle: 'Training',
+        listtxt: [
+            {
+                year: "2021 - 2021",
+                content: "網頁前端工程師實戰班 | 勞動部青年職業訓練 (452hrs)",
+                detail: [
+                    // "培訓內容涵蓋網站企劃、網頁視覺設計、影像處理、前端技巧訓練及後端邏輯概念，並著重於前端開發部分。",
+
+                    "軟體操作 | AdobeXD、Dreamweaver、PhotoShop、VScode",
+
+                    "視覺設計 | 影像編修技巧、網站視覺設計、app介面設計",
+
+                    "前端技能 | HTML&CSS網頁設計、響應式網頁設計實務、JQuery / Bootstrap 前端應用",
+
+                    "後端概念 | PHP +  MySQL動態資料庫網站"
+                ]
+            }
+        ],
+    },
+    {
         listtitle: 'Works',
         listtxt: [
+            {
+                year: "2021 -     ",
+                content: "軟體前端工程師 | 安益國際展覽股份有限公司 (7mos)",
+                detail: [
+                    "全新開發：MasterBox即時訊息管理平台 - 前端頁面及功能開發（包括Api串接及撰寫）",
+                    "舊有購物商城＆課程預約系統前台維護",
+                    "舊有商品、訂單管理＆課程後台管理系統維護",
+                    "與UI設計師溝通並與後端工程師協作",
+                    "Landing Page頁面維護"
+                ]
+            },
             {
                 year: "2020 - 2020",
                 content: "視覺設計 | 安益國際展覽股份有限公司 (1yr)",
@@ -65,26 +91,6 @@ const experiencesData = [
                     "海報設計編排(育成中心)"
                 ]
             },
-        ],
-    },
-    {
-        listtitle: 'Training',
-        listtxt: [
-            {
-                year: "2021 - 2021",
-                content: "網頁前端工程師實戰班 | 勞動部青年職業訓練 (452hrs)",
-                detail: [
-                    // "培訓內容涵蓋網站企劃、網頁視覺設計、影像處理、前端技巧訓練及後端邏輯概念，並著重於前端開發部分。",
-
-                    "軟體操作 | AdobeXD、Dreamweaver、PhotoShop、VSCode",
-
-                    "視覺設計 | 影像編修技巧、網站視覺設計、App介面設計",
-
-                    "前端技能 | Html&Css網頁設計、響應式網頁設計實務、JQuery / Bootstrap 前端應用",
-
-                    "後端概念 | Php +  MySQL動態資料庫網站"
-                ]
-            }
         ],
     },
 ];

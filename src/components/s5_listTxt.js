@@ -4,14 +4,14 @@ function ListTxt({ year, content, detail, bgStyle }) {
             <li key={i} className="ListDetailitem">{item}</li>
         )
     })
-    return (<>
+    return (
         <div className="ListTxt">
-            <p className="ListYear">{year}</p>
+            <p className="ListYear" style={{width:'95px'}}>{year}</p>
             <div className="ListContent" ><span className="ListContentTitle" style={bgStyle}>{content}</span>
                 <ul className="ListDetail">{detailArry}</ul>
             </div>
         </div>
-    </>)
+    )
 }
 export default ListTxt;
 
