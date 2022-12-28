@@ -74,10 +74,102 @@ import p6_2_j_s from "../image/-section4/s4-p6_2-j-s.jpg";
 import p6_2_j_xs from "../image/-section4/s4-p6_2-j-xs.jpg";
 
 
+import p7_1_w from "../image/-section4/s4-p7_1.webp";
+import p7_1_w_s from "../image/-section4/s4-p7_1.webp";
+import p7_1_w_xs from "../image/-section4/s4-p7_1.webp";
+// import p7_1_w_s from "../image/-section4/s4-p7_1-w-s.webp";
+// import p7_1_w_xs from "../image/-section4/s4-p7_1-w-xs.webp";
+import p7_2_w from "../image/-section4/s4-p7_2.webp";
+import p7_2_w_s from "../image/-section4/s4-p7_2.webp";
+import p7_2_w_xs from "../image/-section4/s4-p7_2.webp";
+// import p7_2_w_s from "../image/-section4/s4-p7_2-w-s.webp";
+// import p7_2_w_xs from "../image/-section4/s4-p7_2-w-xs.webp";
+import p7_1_j from "../image/-section4/s4-p7_1.jpg";
+import p7_1_j_s from "../image/-section4/s4-p7_1-j-s.jpg";
+import p7_1_j_xs from "../image/-section4/s4-p7_1-j-xs.jpg";
+import p7_2_j from "../image/-section4/s4-p7_2.jpg";
+import p7_2_j_s from "../image/-section4/s4-p7_2-j-s.jpg";
+import p7_2_j_xs from "../image/-section4/s4-p7_2-j-xs.jpg";
+
+
 const xs = "(max-width: 479.98px)";
 const s = "(max-width: 575.98px)";
 
 const portfolioData = [
+    {
+        title: 'MasterBox訊息整合平台',
+        type: 'Web & App Development',
+        txt: [
+            { item: '✓ React｜Next.js｜React Native' },
+            { item: '✓ SCSS｜Tailwind' },
+            { item: '✓ Storybook ' },
+            { item: '✓ Redux' },
+            { item: '✓ Apollo GraphQL ' },
+            { item: '✓ MongoDB compass' },
+            { item: '✓ Cypress ' },
+            { item: '✓ Figma' }
+        ],        
+        link: 'http://masterbox.masterappinc.com/master-box',
+        file1Webp: [
+            {
+                srcSet: p7_1_w_xs,
+                media: xs,
+                type: "image/webp",
+            },
+            {
+                srcSet: p7_1_w_s,
+                media: s,
+                type: "image/webp",
+            },
+            {
+                srcSet: p7_1_w,
+                type: "image/webp",
+            }
+        ],
+        file2Webp: [
+            {
+                srcSet: p7_2_w_xs,
+                media: xs,
+                type: "image/webp",
+            },
+            {
+                srcSet: p7_2_w_s,
+                media: s,
+                type: "image/webp",
+            },
+            {
+                srcSet: p7_2_w,
+                type: "image/webp",
+            }
+        ],
+        file1Jpg: [
+            {
+                srcSet: p7_1_j_xs,
+                media: xs,
+            },
+            {
+                srcSet: p7_1_j_s,
+                media: s,
+            },
+            {
+                srcSet: p7_1_j,
+            }
+        ],
+        file2Jpg: [
+            {
+                srcSet: p7_2_j_xs,
+                media: xs,
+            },
+            {
+                srcSet: p7_2_j_s,
+                media: s,
+            },
+            {
+                srcSet: p7_2_j,
+            }
+        ],
+    },
+
     {
         title: '蘇韻宇簡歷網站',
         type: 'Web Development',
