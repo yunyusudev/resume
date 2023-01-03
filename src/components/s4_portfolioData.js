@@ -110,7 +110,8 @@ const portfolioData = [
             { item: '✓ Cypress ' },
             // { item: '✓ Figma' }
         ],        
-        link: 'http://masterbox.masterappinc.com/master-box',
+        link: 'https://reurl.cc/jRjqM2',
+        // link: 'http://masterbox.masterappinc.com/master-box',
         file1Webp: [
             {
                 srcSet: p7_1_w_xs,
