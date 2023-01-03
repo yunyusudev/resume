@@ -4,13 +4,13 @@ import experiencesData from "./s5_experiencesData"
 function ListComponents(props) {
 
 
-    const propsArrary = props.expArrary;
+    const {listtitle,listtxt} = props.expArrary;
     const bgStyle = {
-        backgroundColor: `${propsArrary.listtitle === "Education" ? "#fff" : ""}`
+        backgroundColor: `${listtitle === "Education" ? "#fff" : ""}`
     }
 
 
-    const listArrary = propsArrary.listtxt.map((item, i) => {
+    const listArrary = listtxt.map((item, i) => {
         return (
             <ListTxt year={item.year} content={item.content} detail={item.detail} key={i} bgStyle={bgStyle} />
         )
@@ -18,8 +18,10 @@ function ListComponents(props) {
 
 
     return (
-        <div className="ListContainer">
-            <p className="ListTitle" >{propsArrary.listtitle}</p>
+        <div className="ListContainer" style={{marginTop:'3rem',marginBottom:'3rem',borderBottom: `${listtitle!=='Education'?'0.75px solid #c4c4c4':'none'}`}}>
+            <p className="ListTitle" style={{marginBottom:'3rem'}} >{listtitle}</p>
+        {/* <div className="ListContainer" style={{marginTop:'3rem',marginBottom:'3rem',borderBottom: '0.75px solid #c4c4c4'}}>
+            <p className="ListTitle" style={{marginBottom:'3rem'}} >{propsArrary.listtitle}</p> */}
 
                 {listArrary}
 

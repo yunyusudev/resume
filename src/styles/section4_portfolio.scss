@@ -223,7 +223,9 @@ $mdInfoWidth: 40%;
                     }
                     .liferoomLink{
                         .clickBtn{
-                            left:6.5rem;
+                            // left:6.5rem;
+                            right:2rem;
+
                             @include lg {
                                 left:unset;
                                 right:6.5rem;
