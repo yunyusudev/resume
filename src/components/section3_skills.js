@@ -15,12 +15,12 @@ function Skills() {
 
             case 'Front-end':
                 // case "網頁前端功能":
-                skill_items = ['JavaScript','React','React Native', 'Next.js', 'Redux', 'GraphQL', 'Apollo','Postman', 'Expo', 'AJAX', 'jQuery','Cypress', 'Webpack', 'SourceTree', 'Git / Github'];
+                skill_items = ['JavaScript','React','React Native', 'Next.js', 'Redux', 'Apollo GraphQL','Postman', 'Expo', 'AJAX', 'jQuery','Cypress', 'Webpack', 'SourceTree', 'Git / Github'];
                 break;
 
             case 'Back-end':
                 // case '網站後端串接':
-                skill_items = ['MongoDB','PHP7', 'MySQL','Node'];
+                skill_items = ['MongoDB','PHP7', 'MySQL','SQL'];
                 break;
 
             case 'Web Design':

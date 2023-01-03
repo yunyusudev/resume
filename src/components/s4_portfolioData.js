@@ -97,17 +97,18 @@ const s = "(max-width: 575.98px)";
 
 const portfolioData = [
     {
-        title: 'MasterBox訊息整合平台',
+        title: '企業智慧客服訊息管理',
         type: 'Web & App Development',
         txt: [
-            { item: '✓ React｜Next.js｜React Native' },
+            { item: '✓ React｜Next.js' },
+            { item: '✓ React Native' },
             { item: '✓ SCSS｜Tailwind' },
             { item: '✓ Storybook ' },
             { item: '✓ Redux' },
             { item: '✓ Apollo GraphQL ' },
             { item: '✓ MongoDB compass' },
             { item: '✓ Cypress ' },
-            { item: '✓ Figma' }
+            // { item: '✓ Figma' }
         ],        
         link: 'http://masterbox.masterappinc.com/master-box',
         file1Webp: [

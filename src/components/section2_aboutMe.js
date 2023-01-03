@@ -6,7 +6,7 @@ import rebecca_w_lg from "../image/rebecca-w-lg.webp"
 import rebecca_p_max from "../image/rebecca-p-blg.png"
 import rebecca_p_lg from "../image/rebecca-p-lg.png"
 
-import file from "../file/RebeccaResume.pdf"
+// import file from "../file/RebeccaResume.pdf"
 import DownloadIcon from "./s2_downloadIcon"
 import ClickBtn from "./c_clickBtn"
 import goScrollTo from "../hooks/goScrollTo"
@@ -83,7 +83,8 @@ function AboutMe() {
             </figcaption>
         </figure>
         <div className="pointTo">☟</div>
-        <a href={file} className="downloadBtn" download="RebeccaSu_resume.pdf">
+        <a href={`https://reurl.cc/x1bqO1`} target="_blank"  rel="noreferrer" className="downloadBtn" >
+        {/* <a href={file} className="downloadBtn" download="RebeccaSu_resume.pdf"> */}
         <span className="xxsHidden">Click to </span>Download <span className="sHidden">RebeccaSu's </span>Resume<span className="fixHeight">'</span>
             <DownloadIcon />
         </a>
