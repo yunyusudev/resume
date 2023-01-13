@@ -74,7 +74,7 @@ function AboutMe() {
                 </div>
             <figcaption>
                 <h2 className="hello">Hello,I'm Rebecca! </h2>
-                <p>擁有邏輯脈絡性思維的理性，同時具有想像力及探索未知的感性；喜歡傳遞生活中的美好。</p>
+                <p>擁有邏輯脈絡性思維的理性，同時具有想像力及探索未知的感性；善於舒適溝通及有效率的工作模式，喜歡傳遞生活中的美好。</p>
                 <ul className="btnList">
                     <li onClick={() => handleScroll('#Skills')}><ClickBtn txt="Skills" /></li>
                     <li onClick={() => handleScroll('#Portfolio')}><ClickBtn txt="Portfolio" /></li>
