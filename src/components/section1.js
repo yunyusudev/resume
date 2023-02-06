@@ -11,7 +11,7 @@ import banner01_j_lg from "../image/index01-j-lg.jpg"
 import banner01_j_sm from "../image/index01-j-sm.jpg"
 import banner01_j_s from "../image/index01-j-s.jpg"
 import banner01_j_xs from "../image/index01-j-xs.jpg"
-
+  
 import Wipe from './s1_wipe.js';
 import React, { useRef, useEffect, useReducer, useCallback } from 'react';
 export const canvasContainer = React.createContext();
