@@ -97,7 +97,7 @@ const s = "(max-width: 575.98px)";
 
 const portfolioData = [
     {
-        title: '企業智慧客服訊息管理',
+        title: 'Enterprise Message Management Platform.',
         type: 'Web & App Development',
         txt: [
             { item: '✓ React｜Next.js' },
@@ -105,7 +105,7 @@ const portfolioData = [
             { item: '✓ SCSS｜Tailwind' },
             { item: '✓ Storybook ' },
             { item: '✓ Redux' },
-            { item: '✓ Apollo GraphQL ' },
+            { item: '✓ GraphQL ' },
             { item: '✓ MongoDB compass' },
             { item: '✓ Cypress ' },
             // { item: '✓ Figma' }
@@ -173,13 +173,13 @@ const portfolioData = [
     },
 
     {
-        title: '蘇韻宇簡歷網站',
+        title: 'Portfolio Website',
         type: 'Web Development',
         txt: [
             { item: '✓ Html5｜Css3｜Rwd' },
             { item: '✓ React.js'},
             { item: '✓ Create React App' },
-            { item: '✓ useReducer（with useReducer、createContext、useContext）' },
+            { item: '✓ useReducer（with createContext、useContext）' },
             { item: '✓ SourceTree｜Github' }
         ],
         link: 'https://yunyusudev.github.io/resume/',
@@ -243,14 +243,14 @@ const portfolioData = [
         ],
     },
     {
-        title: '家居品牌前台官網',
-        type: 'Web Development(2人協作)',
+        title: 'LifeRoom Shopping Website',
+        type: 'Web Development(2person)',
         txt: [
             { item: '✓ Html5｜Css3｜Rwd' },
             { item: '✓ JavaScript | Ajax' },
             { item: '✓ Php7' },
             { item: '✓ MySQL' },
-            { item: '✓ 系統文件 ( 前&後台 )' }
+            { item: '✓ Spec.' }
         ],
         // link: 'https://reurl.cc/annN64',
         link: 'http://liferoomdesign.byethost15.com/',
@@ -314,15 +314,15 @@ const portfolioData = [
         ],
     },
     {
-        title: '家居品牌後台系統',
-        type: 'Web Development(2人協作)',
+        title: 'LifeRoom Backend System',
+        type: 'Web Development(2person)',
         txt: [
             { item: '✓ Html5｜Css3｜Rwd' },
             { item: '✓ Bootstrap5' },
             { item: '✓ JavaScript | Ajax' },
             { item: '✓ Php7' },
             { item: '✓ MySQL' },
-            { item: '✓ 系統文件 ( 前&後台 )' }
+            { item: '✓ Spec.' }
         ],
         link: 'https://reurl.cc/ErrZkv',
         file1Webp: [
@@ -458,7 +458,7 @@ const portfolioData = [
         title: '保養品品牌App',
         type: 'UI Design',
         txt: [
-            {item:'依據品牌原有形像規劃，適當運明的品牌色彩及區塊陰影增加畫面層次。清新、質感、易操作且為主要特色，搭配俐落的圖示引導及互動回饋，提升使用者的使用體驗。'}
+            {item:'Use brand colors and block shadows to increase the layering of the interface. With neat icon guidance and interactive feedback, the user experience is enhanced.'}
         ],
         link: 'https://reurl.cc/vddgre',
         file1Webp: [
@@ -527,7 +527,7 @@ const portfolioData = [
     //     txt: '家居品牌網站設計家居品牌網站設計家居品牌網站設計家居品牌網站設計家居品牌網站設計'
     // },
     {
-        title: '平面設計作品集',
+        title: 'Commercial Design Portfolio',
         type: 'Commercial Design',
         txt: [{ item: '' }],
         link: 'https://reurl.cc/ErrZAg',

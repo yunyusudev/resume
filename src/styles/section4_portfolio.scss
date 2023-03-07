@@ -17,6 +17,7 @@ $mdInfoWidth: 40%;
             min-height: calc(100vh - 6rem);
             &:nth-child(even) {
                 .projectContent {
+                    
                     @include flexSet(row-reverse, space-between, flex-start);
                     @include lg {
                         @include flexSet(column, flex-start, flex-start);
@@ -178,6 +179,10 @@ $mdInfoWidth: 40%;
                         font-size: 1.5rem;
                         color: $colorDarkGray;
                         letter-spacing: 0.15rem;
+                        .projectTitleSpan{
+                            font-size: 1.3rem;
+                            background-color:$colorLightYello;    
+                        }
                     }
                     .projectTxt {
                         color: $colorDarkGray;

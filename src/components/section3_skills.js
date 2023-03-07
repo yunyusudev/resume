@@ -15,7 +15,7 @@ function Skills() {
 
             case 'Front-end':
                 // case "網頁前端功能":
-                skill_items = ['JavaScript','React','React Native', 'Next.js', 'Redux', 'Apollo GraphQL','Postman', 'Expo', 'AJAX', 'jQuery','Cypress', 'Webpack', 'SourceTree', 'Git / Github'];
+                skill_items = ['JavaScript','React','React Native', 'Next.js', 'Redux', 'GraphQL', 'Cypress', 'Postman', 'SourceTree', 'Git', 'Github'];
                 break;
 
             case 'Back-end':

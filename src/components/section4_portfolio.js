@@ -39,7 +39,7 @@ function Project(props) {
                 <figcaption className="projectInfo">
                     <hr className="lineTop" />
                     <p className="projectType">{props.type}</p>
-                    <p className="projectTitle">{props.title}</p>
+                    <p className="projectTitle"><span className='projectTitleSpan'>{props.title}</span></p>
                     <div className="projectTxt">{projectTxtArry}</div>
                     <a href={props.link} target="_blank" rel="noopener noreferrer">
                         <ClickBtn txt="View" />

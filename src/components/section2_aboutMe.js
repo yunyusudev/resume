@@ -73,8 +73,13 @@ function AboutMe() {
                     </div>
                 </div>
             <figcaption>
-                <h2 className="hello">Hello,I'm Rebecca! </h2>
-                <p>擁有邏輯脈絡性思維的理性，同時具有想像力及探索未知的感性；善於舒適溝通及有效率的工作模式，喜歡傳遞生活中的美好</p>
+            <h2 className="hello">Hello,I'm Rebecca! </h2>
+            <h2 className="hello">Aesthetic Front-End Developer</h2>
+                <span style={{fontWeight:500,color:'#5a5a5a'}}>
+{/* 【 Aesthetic Front-End Developer 】<br/> */}
+✓ React｜Tailwind CSS｜GraphQL｜Redux</span><br/>
+
+                <p style={{lineHeight:'1.75rem',marginTop:'10px'}}>Rationality with logical and contextual thinking, imagination and sensibility to explore the unknown; good at empathy, communication and efficient working mode.</p>
                 <ul className="btnList">
                     <li onClick={() => handleScroll('#Skills')}><ClickBtn txt="Skills" /></li>
                     <li onClick={() => handleScroll('#Portfolio')}><ClickBtn txt="Portfolio" /></li>
